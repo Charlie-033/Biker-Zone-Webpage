@@ -18,18 +18,34 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- style tag -->
     <style>
       .font-poppins {
         font-family: "Poppins", serif;
       }
     </style>
+    <!-- script tag -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              'bike-primary': '#E76F51',
+              'slider-bg': 'rgba(231, 111, 81, 0.1)',
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body class="font-poppins">
     <!-- Header section -->
-    <header>
-      <nav>
+     <!-- class='md:container mx-auto' -->
+    <header class="max-w-screen-2xl mx-auto mt-2 md:mt-10 md:px-16 lg:px-35 xl:px-40">
+      <nav class="md:mb-10">
         <div class="navbar bg-base-100">
-          <div class="navbar-start">
+          <div class="flex-1">
             <div class="dropdown">
               <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                 <svg
@@ -51,30 +67,73 @@
                 tabindex="0"
                 class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
-                <li><a>Home</a></li>
-                <li><a>Shop</a></li>
-                <li><a>News</a></li>
-                <li><a>Contact</a></li>
+                <li class="font-semibold"><a>Home</a></li>
+                <li class="font-semibold"><a>Shop</a></li>
+                <li class="font-semibold"><a>News</a></li>
+                <li class="font-semibold"><a>Contact</a></li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-xl">Biker Zone</a>
+            <a class="font-semibold text-xl">Biker Zone</a>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
-              <li><a>Home</a></li>
-              <li><a>Shop</a></li>
-              <li><a>News</a></li>
-              <li><a>Contact</a></li>
+              <li class="font-semibold"><a>Home</a></li>
+              <li class="font-semibold"><a>Shop</a></li>
+              <li class="font-semibold"><a>News</a></li>
+              <li class="font-semibold"><a>Contact</a></li>
             </ul>
           </div>
-          <div class="navbar-end">
-            <a class="btn btn-error">Login</a>
+          <div class="ml-12">
+            <a class="btn bg-bike-primary px-8 rounded-md text-white">Login</a>
           </div>
         </div>
       </nav>
+      <!-- Slider/Carousel -->
+      <div class="carousel w-full bg-slider-bg rounded-md">
+        <!-- Slider 1 -->
+        <div id="slide1" class="carousel-item relative w-full">
+          <div class="lg:flex justify-center items-center p-5 md:p-24">
+            <!-- text div -->
+            <div class="space-y-8 flex-1">
+              <h2 class="text-6xl font-semibold leading-snug text-black">Ride-on R15 V4 <br> with Smile</h2>
+              <p class="text-gray-800">Amet minim mollit non deserunt ullamco 
+                est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                <button class="btn bg-bike-primary px-8 rounded-md text-white">Purchase</button>
+            </div>
+            <!-- Image div -->
+            <div class="flex-1">
+              <img src="images/slider/bike1.png" class="w-full"/>
+            </div>
+          </div>
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+            class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+            class="w-full" />
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- Main section -->
-    <main></main>
+    <main class="md:container mx-auto">
+
+    </main>
     <!-- Footer section -->
     <footer></footer>
   </body>
